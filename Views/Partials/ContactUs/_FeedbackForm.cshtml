@@ -1,0 +1,32 @@
+﻿<div class="my-5">
+	<div class="form-floating">
+		<input class="form-control" id="fullname" type="text" placeholder="Enter Your Full Name" required/>
+		<label for="fullname">Full Name</label>
+		<div class="text-danger d-none" id="fullnameValidation">A Full name is required</div>
+	</div>
+
+	<div class="form-floating">
+		<input class="form-control" id="email" type="text" placeholder="Enter Your Email" required />
+		<label for="email">Email Address</label>
+		<div class="text-danger d-none" id="emailValidation">An Email is required</div>
+	</div>
+
+	<div class="form-floating">
+		<input class="form-control" id="subject" type="text" placeholder="Enter Your Subject" required />
+		<label for="subject">Subject</label>
+		<div class="text-danger d-none" id="subjectValidation">A subject is required</div>
+	</div>
+
+	<div class="form-floating">
+		<textarea class="form-control" id="message" type="text" placeholder="Enter Your message here" style="height:12rem" required></textarea>
+		<label for="message">Message</label>
+		<div class="text-danger d-none" id="messageValidation">A message is required</div>
+	</div>
+
+	<button class="btn btn-primary text-uppercase mt-2" id="contact-submit" type="submit">Submit</button>
+
+</div>
+<partial name="ContactUs/_FeedbackFormSuccess"/>
+<partial name="ContactUs/_FeedbackFormFailure" />
+
+<script src="~/views/partials/ContactUs/_FeedbackForm.cshtml.js" defer></script>

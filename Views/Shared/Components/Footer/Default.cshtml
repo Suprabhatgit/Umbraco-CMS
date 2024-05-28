@@ -1,0 +1,43 @@
+﻿@model UmbracoBlogFinal1.App_Code.Models.ViewComponentModels.FooterView
+
+
+<footer class="border-top">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="#!">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#!">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#!">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="text-center mb-2">
+                    @foreach(var item in Model?.FooterLinks){
+                    <a href="@item.Url"target="@item?.Target" title="">@item.Name @(item?.Name==Model.FooterLinks.Last().Name?"":"|")  </a> 
+                    }
+                </div>
+                <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website @DateTime.Now.Year</div>
+            </div>
+        </div>
+    </div>
+</footer>
